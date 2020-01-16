@@ -24,13 +24,18 @@
         "filePath": "testing/lambda.js",
         "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
-          "runtime": "nodejs8.10",
+          "runtime": "nodejs10.x",
           "handler": "handler",
           "timeout": 60,
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "apigusEast1pingpingany",
+            "config": {}
+          }
+        ]
       }
     },
     "rootNode": "0fd6a268-366b-4f92-bc11-2e004a8a07f0",
@@ -38,7 +43,27 @@
       "28e46a4e-19a2-40fc-94cf-1a469dbcaa6e"
     ],
     "currentFileId": "28e46a4e-19a2-40fc-94cf-1a469dbcaa6e",
-    "resources": {},
+    "resources": {
+      "apigusEast1pingpingany": {
+        "name": "apigusEast1pingpingany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "ping",
+          "endpointType": "REGIONAL",
+          "resourceMode": 0,
+          "resourceName": "ping",
+          "resourcePath": "/ping",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "prod",
+          "mode": 0
+        }
+      }
+    },
     "customTemplate": {
       "dialect": null,
       "definitions": null
@@ -64,7 +89,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1579204596523
+    "lastSave": 1579206845959
   },
   "VCS_STATE": {
     "provider": "GitHub",
