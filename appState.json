@@ -1,0 +1,76 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "0fd6a268-366b-4f92-bc11-2e004a8a07f0": {
+        "id": "0fd6a268-366b-4f92-bc11-2e004a8a07f0",
+        "parent": null,
+        "name": "testing",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "28e46a4e-19a2-40fc-94cf-1a469dbcaa6e"
+        ],
+        "isRemovable": false,
+        "filePath": "testing"
+      },
+      "28e46a4e-19a2-40fc-94cf-1a469dbcaa6e": {
+        "id": "28e46a4e-19a2-40fc-94cf-1a469dbcaa6e",
+        "parent": "0fd6a268-366b-4f92-bc11-2e004a8a07f0",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "testing/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      }
+    },
+    "rootNode": "0fd6a268-366b-4f92-bc11-2e004a8a07f0",
+    "openFiles": [
+      "28e46a4e-19a2-40fc-94cf-1a469dbcaa6e"
+    ],
+    "currentFileId": "28e46a4e-19a2-40fc-94cf-1a469dbcaa6e",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "testing",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1579204596523
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "testing",
+      "url": "https://github.com/Hajk/testing"
+    }
+  }
+}
