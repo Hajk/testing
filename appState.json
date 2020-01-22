@@ -22,7 +22,6 @@
         "children": [],
         "isRemovable": true,
         "filePath": "testing/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
         "config": {
           "runtime": "nodejs10.x",
           "handler": "handler",
@@ -35,7 +34,16 @@
             "resourceName": "apigusEast1pingpingany",
             "config": {}
           }
-        ]
+        ],
+        "testCases": {
+          "3fa63388-6c04-407d-9e2f-57f75eb287a5": {
+            "id": "3fa63388-6c04-407d-9e2f-57f75eb287a5",
+            "name": "Test event",
+            "functionId": "28e46a4e-19a2-40fc-94cf-1a469dbcaa6e",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
       }
     },
     "rootNode": "0fd6a268-366b-4f92-bc11-2e004a8a07f0",
@@ -62,6 +70,17 @@
           "stageName": "prod",
           "mode": 0
         }
+      },
+      "s3testDevServerlessdeploymentbucket1evp6hjwdg09z": {
+        "name": "s3testDevServerlessdeploymentbucket1evp6hjwdg09z",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "test-dev-serverlessdeploymentbucket-1evp6hjwdg09z"
+          }
+        }
       }
     },
     "customTemplate": {
@@ -79,7 +98,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "javascript",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -89,7 +116,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1579206845959
+    "lastSave": 1579682793204
   },
   "VCS_STATE": {
     "provider": "GitHub",
